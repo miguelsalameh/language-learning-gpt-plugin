@@ -1,0 +1,181 @@
+{
+  "Unit 1": {
+    "Greetings in French": ["Greetings in French"],
+    "Understand days of the week and months of the year": [
+      "Days of the week",
+      "Months of the year"
+    ],
+    "Count (numbers)": ["Counting numbers"],
+    "Spell words": ["Spelling words"],
+    "Introduce yourself (give your age, your job, talk about your family, say where you are from, where you live, say the languages you speak)": [
+      "Introducing yourself",
+      "Talking about age",
+      "Talking about job",
+      "Talking about family",
+      "Talking about nationality",
+      "Talking about residence",
+      "Talking about languages spoken"
+    ],
+    "Ask questions (1)": ["Asking questions (1)"],
+    "Learn basic vocabulary": ["Basic vocabulary"],
+    "Auxiliary verbs (to be/to have)": ["Auxiliary verbs (to be/to have)"],
+    "Genders (masculine/feminine)": ["Genders (masculine/feminine)"],
+    "Definite and indefinite articles": [
+      "Definite articles",
+      "Indefinite articles"
+    ],
+    "Plural form": ["Plural form"],
+    "Possessive adjectives (my, your, his/her…)": ["Possessive adjectives"],
+    "Regular verbs at present tense (-er verbs)": [
+      "Regular verbs at present tense (-er verbs)"
+    ]
+  },
+  "Unit 2": {
+    "Understand a menu/Order at a restaurant": [
+      "Understanding a menu",
+      "Ordering at a restaurant"
+    ],
+    "Ask questions (2)": ["Asking questions (2)"],
+    "Understand and give directions (1)": [
+      "Understanding directions (1)",
+      "Giving directions (1)"
+    ],
+    "Speak about the weather": ["Speaking about the weather"],
+    "Say the time": ["Saying the time"],
+    "Suggest an outing": ["Suggesting an outing"],
+    "Buy in shops": ["Shopping in shops"],
+    "Plural of nouns": ["Plural of nouns"],
+    "“on” pronoun": ["“on” pronoun"],
+    "Negation": ["Negation"],
+    "Prepositions of location (in, on, next to, in front of…)": [
+      "Prepositions of location"
+    ],
+    "Use « Quel », « Est-ce que » and « Qu'est-ce que » in a question": [
+      "Using question words",
+      "Using « Quel », « Est-ce que » and « Qu'est-ce que »"
+    ],
+    "Demonstrative adjectives (this, that)": ["Demonstrative adjectives"]
+  },
+  "Unit 3": {
+    "Do your grocery shopping": ["Doing grocery shopping"],
+    "Indicate a quantity": ["Indicating quantity"],
+    "Speak about the future (1)": ["Speaking about the future (1)"],
+    "Make a positive/negative comment": [
+      "Making positive comments",
+      "Making negative comments"
+    ],
+    "Describe someone": ["Describing someone"],
+    "Partitive articles": ["Partitive articles"],
+    "Answering a negative question": ["Answering negative questions"],
+    "Futur Proche (future tense)": ["Futur Proche (future tense)"],
+    "Reflexive verbs (se lever…)": ["Reflexive verbs (se lever…)"],
+    "Imperative Form": ["Imperative Form"]
+  },
+  "Unit 4": {
+    "Speak about the past (1)": ["Speaking about the past (1)"],
+    "Talk about a duration": ["Talking about duration"],
+    "Talk about your studies": ["Talking about studies"],
+    "Give an advice, order (1)": ["Giving advice (1)", "Giving an order (1)"],
+    "Passé Composé (past tense)": ["Passé Composé (past tense)"],
+    "Présent Continu (Present continuous)": [
+      "Présent Continu (Present continuous)"
+    ],
+    "Direct pronouns": ["Direct pronouns"],
+    "Time markers": ["Time markers"]
+  },
+  "Unit 5": {
+    "Speak about what sport you enjoy doing": [
+      "Speaking about favorite sports"
+    ],
+    "Speak about the future (2)": ["Speaking about the future (2)"],
+    "Give an advice (2)": ["Giving advice (2)"],
+    "Speak about your goals": ["Speaking about goals"],
+    "Express a decision": ["Expressing a decision"],
+    "Revisions of A1 Curriculum": ["Revisions of A1 Curriculum"],
+    "Futur Simple (Future tense)": ["Futur Simple (Future tense)"],
+    "Hypothesis in the future": ["Hypothesis in the future"],
+    "The negative imperative": ["Negative imperative"],
+    "Express a cause/reason and a purpose": [
+      "Expressing cause/reason",
+      "Expressing purpose"
+    ]
+  },
+  "Unit 6": {
+    "Express frequency": ["Expressing frequency"],
+    "Describe your home": ["Describing your home"],
+    "Understand an ad for a flat": ["Understanding an ad for a flat"],
+    "Give directions (2)": ["Giving directions (2)"],
+    "Make a comparison": ["Making comparisons"],
+    "Explain a choice": ["Explaining a choice"],
+    "Present tense": ["Present tense"],
+    "The preposition “Depuis”": ["The preposition “Depuis”"],
+    "Relative pronouns (qui/que)": ["Relative pronouns (qui/que)"],
+    "Comparative/Superlative": ["Comparative/Superlative"]
+  },
+  "Unit 7": {
+    "Speak about the past (2)": ["Speaking about the past (2)"],
+    "Make a description": ["Making a description"],
+    "Indicate a chronology": ["Indicating a chronology"],
+    "Understand a biography": ["Understanding a biography"],
+    "Speak about a life changing event": [
+      "Speaking about a life changing event"
+    ],
+    "Explain a problem/give solutions": [
+      "Explaining a problem",
+      "Giving solutions"
+    ],
+    "Le Passé composé and l'Imparfait (past tenses)": [
+      "Le Passé composé and l'Imparfait (past tenses)"
+    ],
+    "« Il y a » / « Pendant »": ["« Il y a » / « Pendant »"],
+    "Chronology": ["Chronology"],
+    "Cause/Reason": ["Cause/Reason"],
+    "Consequence": ["Consequence"]
+  },
+  "Unit 8": {
+    "Give an opinion (1)": ["Giving an opinion (1)"],
+    "How to avoid repetitions": ["Avoiding repetitions"],
+    "Give an advice (3)": ["Giving advice (3)"],
+    "Express a certitude": ["Expressing certitude"],
+    "Express wishes": ["Expressing wishes"],
+    "Plural of -al words": ["Plural of -al words"],
+    "Direct and indirect pronouns": ["Direct and indirect pronouns"],
+    "Adverbs of manner": ["Adverbs of manner"],
+    "Imperative+Direct and indirect pronouns": [
+      "Imperative+Direct and indirect pronouns"
+    ],
+    "Subjonctive form": ["Subjonctive form"],
+    "Conditional": ["Conditional"],
+    "Irregular verbs": ["Irregular verbs"]
+  },
+  "Unit 9": {
+    "Describe a place": ["Describing a place"],
+    "Talk about citizenship": ["Talking about citizenship"],
+    "Organise a speech": ["Organizing a speech"],
+    "Ask questions about an object": ["Asking questions about an object"],
+    "Describe material": ["Describing material"],
+    "Y pronoun": ["Y pronoun"],
+    "Où Relative pronoun": ["Où Relative pronoun"],
+    "Indefinite adjectives (tout/toute/chaque/quelques)": [
+      "Indefinite adjectives (tout/toute/chaque/quelques)"
+    ],
+    "Opposition/Concession": ["Opposition/Concession"],
+    "Interrogative pronoun « lequel »": ["Interrogative pronoun « lequel »"],
+    "Demonstrative pronouns (celui-ci/celui-là…)": [
+      "Demonstrative pronouns (celui-ci/celui-là…)"
+    ]
+  },
+  "Unit 10": {
+    "Understand a written/oral advertisement": [
+      "Understanding a written/oral advertisement"
+    ],
+    "Give your opinion (2)": ["Giving your opinion (2)"],
+    "Understand a leaflet": ["Understanding a leaflet"],
+    "Make a demand": ["Making a demand"],
+    "Gerundive form": ["Gerundive form"],
+    "En pronoun": ["En pronoun"],
+    "Indicative/Subjonctive": ["Indicative/Subjonctive"],
+    "Negation": ["Negation"],
+    "Prepositions of localization": ["Prepositions of localization"]
+  }
+}

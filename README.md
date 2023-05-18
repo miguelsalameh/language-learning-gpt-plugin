@@ -1,8 +1,12 @@
 # ChatGPT Language Learning Plugin
 
-This is a plugin for ChatGPT that helps users learn German. The plugin allows users to set their desired CEFR level and chat with the AI at that level. It also provides lessons on vocabulary and grammar specific to the user's selected CEFR level.
+This is a plugin for ChatGPT that helps users learn a new Language. The plugin allows users to set their desired CEFR level and chat with the AI at that level. It also provides lessons on vocabulary and grammar specific to the user's selected CEFR level.
 
 <!-- ![image info](./Demo.png) -->
+
+## Language Supported 
+- German
+- French
 
 ## Features
 

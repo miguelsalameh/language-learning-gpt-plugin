@@ -1,11 +1,43 @@
 openapi: 3.0.1
 info:
-  title: Learn German 
-  description: A plugin that allows the user to learn german based on the CEFR Language units
+  title: Learn New Lanaguages 
+  description: A plugin that allows the user to learn german or french based on the CEFR Language units
   version: 'v1'
 servers:
   - url: http://localhost:5003
 paths:
+  /setLanguage/{language}:
+    post:
+      operationId: setUserLanguage
+      summary: Set the user's desired Language
+      parameters:
+            - in: path
+              name: language
+              schema:
+                  type: string
+              required: true
+              description: German | French
+      responses:
+        '200':
+          description: CEFR unit set successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: The language was set to French
+        '400':
+          description: Invalid level provided
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid CEFR level
   /setUnit/{unitNumber}:
     post:
       operationId: setUnitGetPrompt
