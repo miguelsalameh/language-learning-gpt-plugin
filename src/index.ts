@@ -1,9 +1,9 @@
-//Author: Anoop, http://github.com/etherlegend
-
 import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
 import { json } from 'body-parser';
+
+import units from '../data.json'  
 
 const app = express();
 
@@ -12,44 +12,61 @@ app.use(cors({
 }));
 app.use(json());
 
-// Keep track of todos. Does not persist if Node.js session is restarted.
-const _TODOS: { [username: string]: any[] } = {};
+interface UserState {
+  currentUnit: {
+    unit: number;
+    content: unknown;
+  };
+}
 
-const logTodos = (username:string) => {
-  console.log('Todos:');
-  console.log(_TODOS[username]);
+const state: UserState = {
+  currentUnit: {
+    unit: 1,
+    content: units['Unit 1']
+  }
 };
 
-app.post('/todos/:username', async (req, res) => {
-  const username = req.params.username;
-  if (!_TODOS[username]) {
-    _TODOS[username] = [];
+app.post('/setUnit/:unitNumber', async (req, res) => {
+  const unitNumber = req.params.unitNumber;
+  const unitName = `Unit ${unitNumber}` as keyof typeof units;
+
+
+  if(units.hasOwnProperty(unitName)) {
+    const content = units[unitName];
+    state.currentUnit.unit = parseInt(unitNumber);
+    state.currentUnit.content = content;
+    res.status(200).json("The level was set to"+ unitName);
+  } 
+  res.status(400).json();
+});
+
+app.get('/teachUnit', async (req, res) => {
+
+    const response = {
+      gptPrompt: "You will roleplay as a german native speaker teacher, you will " + 
+                  "tell the user the content of the unit and generate a small and brief lesson for the user to learn," + 
+                  "you will not translate anything until asked and you will explain the logic behind every lesson",
+      unitContent: state.currentUnit.content,
+      unitNumber: state.currentUnit.unit
+    }
+
+    res.status(200).json(response);
+
+});
+
+app.get('/conversation', async (req, res) => {
+
+  const response = {
+    gptPrompt: "You will act as a german native speaker teacher, you will " + 
+                "talk to the user about a chosen subject, based on the unit and use the unit content as a basis" + 
+                "to help the user get accustomed to the material, You will inform the user about your character and present the subject briefly" +
+                 "you will use understandable german and briefly explain any word that might be hard",
+    unitContent: state.currentUnit.content,
+    unitNumber: state.currentUnit.unit
   }
-  _TODOS[username].push(req.body.todo);
-  logTodos(username);
-  res.status(200).send('OK');
+  res.status(200).json(response);
 });
 
-app.get('/todos/:username', async (req, res) => {
-  const username = req.params.username;
-  logTodos(username);
-  res.status(200).json(_TODOS[username] || []);
-});
-
-app.delete('/todos/:username', async (req, res) => {
-  const username = req.params.username;
-  const todoIdx = req.body.todo_idx;
-  if (0 <= todoIdx && todoIdx < _TODOS[username].length) {
-    _TODOS[username].splice(todoIdx, 1);
-  }
-  logTodos(username);
-  res.status(200).send('OK');
-});
-
-app.get('/logo.png', async (_, res) => {
-  const filename = 'logo.png';
-  res.sendFile(filename, { root: '.' });
-});
 
 app.get('/.well-known/ai-plugin.json', async (_, res) => {
   fs.readFile('./.well-known/ai-plugin.json', 'utf8', (err, data) => {

@@ -1,7 +1,7 @@
 {
-  "name": "chatgpt-plugin-node-todo",
+  "name": "chatgpt-plugin-language-chad",
   "version": "1.0.0",
-  "description": "Quickstart your ChatGPT Plug In development with this NodeJS boilerplate",
+  "description": "Quickstart your language learning journey with this plugin",
   "main": "src/index.js",
   "scripts": {
     "build": "tsc",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "amazedsaint@gmail.com",
+  "author": "miguelsalameh@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@types/cors": "^2.8.13",

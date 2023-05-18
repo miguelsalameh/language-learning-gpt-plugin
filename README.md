@@ -1,18 +1,14 @@
-# ChatGPT Todo Plugin In NodeJs
+# ChatGPT Language Learning Plugin
 
-This template repository will help you bootstrap your ChatGPT plugin development in NodeJs / Typescript. It provides a simple example of a Todo plugin for ChatGPT. The plugin allows users to add, retrieve, and delete Todo items for different usernames, following the original OpenAI python example.
+This is a plugin for ChatGPT that helps users learn German. The plugin allows users to set their desired CEFR level and chat with the AI at that level. It also provides lessons on vocabulary and grammar specific to the user's selected CEFR level.
 
-Get a todo list ChatGPT plugin up and running in under 5 minutes using NodeJS. If you do not already have plugin developer access, please [join the waitlist](https://openai.com/waitlist/plugins). This is similar to the python sample from OpenAI 
-
-I would also suggest you to read the [plugin documentation from OpenAI](https://platform.openai.com/docs/plugins/) if you havn't done this yet.
-
-![image info](./Demo.png)
+<!-- ![image info](./Demo.png) -->
 
 ## Features
 
-- Add Todo items for a specific user
-- Retrieve Todo items for a specific user
-- Delete Todo items for a specific user
+- Select a unit to start (1-20) Only A1,A2 levels are supported currently
+- Let chatgpt generate exercises based on the unit picked
+- Talk to ChatGpt based on the unit material and let it rolelpay to practice your desired language
 
 ## Getting Started
 
@@ -24,12 +20,6 @@ I would also suggest you to read the [plugin documentation from OpenAI](https://
 ### Installation
 
 1. Clone the repository:
-
-```sh
-git clone https://github.com/etherlegend/chatgpt-plugin-node-todo.git
-cd chatgpt-plugin-node-todo
-```
-
 2. Install the required dependencies:
 
 ```sh
@@ -44,8 +34,6 @@ For development:
 npm start
 ```
 
-
-
 Once the local server is running:
 
 1. Navigate to https://chat.openai.com. 
@@ -58,33 +46,25 @@ The plugin should now be installed and enabled! You can start with a question li
 
 ## API Endpoints
 
-### Add Todo
+### Set Unit Number
 
-- URL: `/todos/:username`
+- URL: `/setUnit/{unitNumber}`
 - Method: `POST`
-- URL Params: `username` (string)
-- Data Params: `{ "todo": "A todo item" }`
+- URL Params: `unitNumber` (string|number)
 - Success Response: `200 OK`
 
-### Get Todos
+### Teach Unit
 
-- URL: `/todos/:username`
+- URL: `/teachUnit`
 - Method: `GET`
-- URL Params: `username` (string)
-- Success Response: `200 OK` with JSON array of todos
+- Success Response: `200 OK` with JSON array of prompt and content
 
-### Delete Todo
+### Conversation 
 
-- URL: `/todos/:username`
-- Method: `DELETE`
-- URL Params: `username` (string)
-- Data Params: `{ "todo_idx": 0 }` (index of the todo item to delete)
-- Success Response: `200 OK`
+- URL: `/conversation`
+- Method: `GET`
+- Success Response: `200 OK` with JSON array of prompt and content
 
 ## Contributing
 
 Contributions are welcome! Please create a fork of this repository, make your changes in a new branch, and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.

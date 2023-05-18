@@ -1,93 +1,98 @@
 openapi: 3.0.1
 info:
-  title: TODO Plugin 
-  description: A plugin that allows the user to create and manage a TODO list using ChatGPT. If you do not know the user's username, ask them first before making queries to the plugin. Otherwise, use the username "global".
+  title: Learn German 
+  description: A plugin that allows the user to learn german based on the CEFR Language units
   version: 'v1'
 servers:
   - url: http://localhost:5003
 paths:
-  /todos/{username}:
-    get:
-      operationId: getTodos
-      summary: Get the list of todos
+  /setUnit/{unitNumber}:
+    post:
+      operationId: setUnitGetPrompt
+      summary: Set the user's desired CEFR level
       parameters:
-      - in: path
-        name: username
-        schema:
-            type: string
-        required: true
-        description: The name of the user.
+            - in: path
+              name: unitNumber
+              schema:
+                  type: string
+              required: true
+              description: the number of the unit
       responses:
-        "200":
-          description: OK
+        '200':
+          description: CEFR unit set successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getTodosResponse'
-    post:
-      operationId: addTodo
-      summary: Add a todo to the list
-      parameters:
-      - in: path
-        name: username
-        schema:
-            type: string
-        required: true
-        description: The name of the user.
-      requestBody: 
-        required: true 
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/addTodoRequest'
-      responses:
-        "200":
-          description: OK
-    delete:
-      operationId: deleteTodo
-      summary: Delete a todo from the list
-      parameters:
-      - in: path
-        name: username
-        schema:
-            type: string
-        required: true
-        description: The name of the user.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/deleteTodoRequest'
-      responses:
-        "200":
-          description: OK
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: CEFR level set to Unit 1, this unit contains "How to correctly pronounce German words?"
+        '400':
+          description: Invalid level provided
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid CEFR level
 
-components:
-  schemas:
-    getTodosResponse:
-      type: object
-      properties:
-        todos:
-          type: array
-          items:
-            type: string
-          description: The list of todos.
-    addTodoRequest:
-      type: object
-      required:
-      - todo
-      properties:
-        todo:
-          type: string
-          description: The todo to add to the list.
-          required: true
-    deleteTodoRequest:
-      type: object
-      required:
-      - todo_idx
-      properties:
-        todo_idx:
-          type: integer
-          description: The index of the todo to delete.
-          required: true
+  /teachUnit:
+    get:
+      operationId: teachUnit
+      summary: Generate an easy to understand lesson about the unit content
+      responses:
+        '200':
+          description: CEFR unit set successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  gptPrompt:
+                    type: string
+                    example: You will act as a german teacher
+                  unitContent:
+                    type: string
+                    example: Unit contains future tense verbs
+        '400':
+          description: something something meaningful error message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: something something meaningful error message
+
+  /conversation:
+    get:
+      operationId: conversation
+      summary: Talk to the user as a character of your choice to practice the language
+      responses:
+        '200':
+          description: Roleplay as a native speaker of the target language
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  gptPrompt:
+                    type: string
+                    example: You will roleplay as a german native speaker
+                  unitContent:
+                    type: string
+                    example: Unit contains future tense verbs
+        '400':
+          description: something something meaningful error message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: something something meaningful error message
